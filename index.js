@@ -96,6 +96,7 @@ async function processDirectory(dir, config, commits) {
 }
 
 function checkCommit(config, commits, version) {
+  console.log(commits, typeof commits);
   for (const commit of commits) {
     const match = commit.message.match(config.commitPattern);
     if (match && match[1] === version) {
