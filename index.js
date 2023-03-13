@@ -33,6 +33,7 @@ async function main() {
     publishArgs
   };
 
+  console.log('eventObj', eventObj);
   await processDirectory(dir, config, eventObj.commits);
 }
 
